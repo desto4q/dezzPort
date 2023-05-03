@@ -1,18 +1,19 @@
 import React from 'react'
 import { IconUser } from "@tabler/icons-react"
+import { links } from '../data/data'
 function Hero() {
 
   
   return (
     <div className="hero">
       <div className="container">
-        <IconUser/>
+        <IconUser className='userIcon'/>
         <div className="links">
-          {Array(1,2,3,4,5,6,7,10).map(()=>{
-            console.log("ss")
-            return(
-              <div className="dummy"></div>
-            )
+        {links.map(({to,Icon},key) => {
+            console.log(Icon)
+            return <a href={to} key={key} target='_blank'>
+              <Icon/>
+            </a>
           })}
         </div>
         <h1>Destiny Osuoha</h1>

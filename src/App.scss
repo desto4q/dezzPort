@@ -44,12 +44,17 @@
     }
     .hero {
         height: calc(100dvh);
-        // background-color: mediumpurple;
+        .userIcon {
+            height: 82px;
+            width: 82px;
+            color: white;
+            border-radius: 100%;
+            outline: 5px solid white;
+        }
         .container {
             padding: 4px;
             width: max-content;
             height: fit-content;
-            background-color: red;
             position: absolute;
             inset: 0;
             margin: auto;
@@ -61,6 +66,17 @@
                 display: flex;
                 align-items: center;
                 gap: 4px;
+                a {
+                    height: 48px;
+                    width: 48px;
+                    display: grid;
+                    place-items: center;
+                    color: white;
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
                 .dummy {
                     width: 48px;
                     height: 48px;
